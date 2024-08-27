@@ -14,58 +14,126 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>User Profile</title>
-<style>
-  body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
-  .profile-container { width: 80%; margin: auto; background-color: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-  .profile-header { display: flex; align-items: center; margin-bottom: 20px; }
-  .profile-image { width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; }
-  .profile-info h1 { margin-bottom: 0.3em; }
-  .profile-info p { margin-bottom: 0.2em; color: #555; }
-  .contact-info, .social-links, .project-status { margin-bottom: 20px; }
-  .contact-info p, .social-links a { margin-bottom: 0.5em; }
-  .progress-bar { background-color: #e0e0e0; border-radius: 5px; overflow: hidden; }
-  .progress-bar div { height: 20px; background-color: #76c7c0; width: 50%; }
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-container {
+            width: 50%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .profile-header p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        .profile-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .profile-content .info {
+            width: 48%;
+        }
+        .profile-content .info h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .profile-content .info p {
+            margin: 5px 0;
+        }
+        .profile-content .status {
+            width: 48%;
+        }
+        .profile-content .status h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .profile-content .status .progress {
+            margin: 10px 0;
+        }
+        .profile-content .status .progress-bar {
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .profile-content .status .progress-bar div {
+            height: 20px;
+            background: #4caf50;
+            width: 0;
+        }
 
-</style>
+
+    </style>
 </head>
 <body>
 
-<div class="profile-container">
-    <div class="profile-header">
-        <img src="path_to_profile_image.jpg" alt="John Doe" class="profile-image">
-        <div class="profile-info">
-            <h1>John Doe</h1>
-            <p>Full Stack Developer</p>
-            <p>Bay Area, San Francisco, CA</p>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="profile-pic.jpg" alt="Profile Picture" width="100">
+            <div>
+                <h1>John Doe</h1>
+                <p>Full Stack Developer, Bay Area, San Francisco</p>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="info">
+                <h2>Profile Information</h2>
+                <p><strong>Full Name:</strong> Kenneth Valdez</p>
+                <p><strong>Email:</strong> fip@jukmuh.al</p>
+                <p><strong>Phone:</strong> (239) 816-9029</p>
+                <p><strong>Mobile:</strong> (320) 380-4539</p>
+                <p><strong>Address:</strong> Bay Area, San Francisco, CA</p>
+            </div>
+            <div class="status">
+                <h2>Assignment Project Status</h2>
+                <div class="progress">
+                    <p>Web Design</p>
+                    <div class="progress-bar">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="progress">
+                    <p>One Page Markup</p>
+                    <div class="progress-bar">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="progress">
+                    <p>Mobile Template</p>
+                    <div class="progress-bar">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="progress">
+                    <p>Backend API</p>
+                    <div class="progress-bar">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="contact-info">
-        <p>Email: john.doe@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: Bay Area, San Francisco, CA</p>
-    </div>
-
-    <div class="social-links">
-        <a href="#">GitHub</a><br>
-        <a href="#">Twitter</a><br>
-        <a href="#">LinkedIn</a>
-    </div>
-
-    <div class="project-status">
-        <h2>Website Project Status</h2>
-        <div class="progress-bar">
-            <div style="width: 70%;"></div>
-        </div>
-        <h2>Mobile App Project Status</h2>
-        <div class="progress-bar">
-            <div style="width: 50%;"></div>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
 
    {% endblock main %}
 </body>
