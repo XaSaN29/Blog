@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+            margin: 1em 0;
+        }
+        #home {
+            background-color: #f4f4f4;
+        }
+        #about {
+            background-color: #e2e2e2;
+        }
+        #profile {
+            background-color: #d0d0d0;
+        }
+        #profile-setup {
+            background-color: #bebebe;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'profil' %}">Profile</a>
+        <a href="{% url 'profil-settings' %}">Profile Settings</a>
+    </nav>
+
+        {% block main %}
+        {% endblock main %}
+</body>
+</html>
