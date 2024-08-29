@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'root.urls'
+AUTH_USER_MODEL  = 'apps.User'
 
 TEMPLATES = [
     {
@@ -118,6 +119,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_FILE = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
