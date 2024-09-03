@@ -141,7 +141,7 @@ button{
     </div>
     <form method="post">
         {% csrf_token %}
-        <h3>Login</h3>
+        <h3>Register</h3>
 
 
         <label for="profile-picture">Profile Image:</label>
@@ -163,7 +163,7 @@ button{
         <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password">
         <div class="buttons_div">
         <a href="{% url 'login' %}"><button type="button">Login</button></a>
-        <a><button type="submit">Register</button></a>
+        <button type="submit">Register</button>
         </div>
 <!--        <div class="social">-->
 <!--          <div class="go"><i class="fab fa-google"></i>  Google</div>-->
