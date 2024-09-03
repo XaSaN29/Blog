@@ -25,11 +25,8 @@ from apps.views import(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', IndexView.as_view(), name="index"),
+    path('', IndexView.as_view(), name="index"),
     path('about/', AboutView.as_view(), name="about"),
-    path('', UserLoginView.as_view(), name="login"),
-    path('profil/', ProfilView.as_view(), name="profil"),
-    path('profil-settings/', ProfilSettingsView.as_view(), name="profil-settings"),
-    path('search/', SearchView.as_view(), name="search"),
+    path('login/', UserLoginView.as_view(), name="login"),
     path('register/', RegisterView.as_view(), name="register")
 ]
