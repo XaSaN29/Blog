@@ -5,10 +5,180 @@
     <meta charset="UTF-8">
     <title>Blog</title>
 
+
+    {% block main %}
+
+    <style>
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+      --color: rgba(114, 114, 114, 0.3);
+      background-color: #191a1a;
+      background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+          linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+      background-size: 55px 55px;
+    color: #fff;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #566573;
+}
+
+.text-section p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-section .image-credit {
+    font-size: 24px;
+}
+
+.text-section a {
+    color: #566573;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.skills{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.skills-content{
+    display: flex;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.skills-content h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #79838D;
+}
+
+.skills-content p{
+   font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-    {% block main %}
-    <h1>About</h1>
+
+    <section class="about-me">
+        <div class="content">
+            <div class="text-section">
+                <h2>ABOUT ME</h2>
+                <p>
+                    Elit sed vulputate mi sit amet mauris. Arcu odio ut sem nulla pharetra.
+                    Nisi scelerisque eu ultrices vitae.
+                    Dapibus ultrices in iaculis nunc sed augue lacus.
+                    Laoreet non curabitur gravida arcu ac. Eget velit aliquet sagittis id consectetur purus ut.
+                    Sit amet luctus venenatis lectus magna fringilla urna.
+                    Dolor morbi non arcu risus quis varius quam.
+                    Aenean sed adipiscing diam donec adipiscing tristique risus.
+                </p>
+<!--                <p class="image-credit">Image from <a href="https://www.freepik.com">Freepik</a></p>-->
+<!--                <div class="social-icons">-->
+<!--                    <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>-->
+<!--                    <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>-->
+<!--                    <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>-->
+<!--                    <a href="#"><img src="icon-whatsapp.png" alt="WhatsApp"></a>-->
+<!--                </div>-->
+            </div>
+<!--            <div class="image-section">-->
+<!--                <img src="laptop-image.jpg" alt="Laptop with HTML code">-->
+<!--            </div>-->
+        </div>
+    </section>
+
+     <section class="skills">
+        <div class="skills-content">
+            <div class="text-skills">
+                <h2>SKILLS</h2>
+
+
+
+<!--                <p class="image-credit">Image from <a href="https://www.freepik.com">Freepik</a></p>-->
+<!--                <div class="social-icons">-->
+<!--                    <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>-->
+<!--                    <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>-->
+<!--                    <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>-->
+<!--                    <a href="#"><img src="icon-whatsapp.png" alt="WhatsApp"></a>-->
+<!--                </div>-->
+            </div>
+<!--            <div class="image-section">-->
+<!--                <img src="laptop-image.jpg" alt="Laptop with HTML code">-->
+<!--            </div>-->
+        </div>
+    </section>
+
    {% endblock main %}
 </body>
 </html>
