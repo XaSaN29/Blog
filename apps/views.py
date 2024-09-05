@@ -55,3 +55,7 @@ class RegisterView(CreateView):
     form_class = UserRegisterForm
     template_name = "register.html"
     success_url = "/"
+
+
+class PostView(TemplateView):
+    template_name = "post.html"
