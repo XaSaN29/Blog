@@ -8,16 +8,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Post</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
 </head>
 <body>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+<div class="post">
+    {% for i in posts %}
+    	<div class="card" style="width: 18rem;">
+          <img src="{{ i.images.first.image.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ i.title }}</h5>
+              {% comment %}
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              {% endcomment %}
+          </div>
+        </div>
+    {% endfor %}
+
+
+    <div class="add_post">
+        <a href="#">Add post</a>
+    </div>
 </div>
 
 
