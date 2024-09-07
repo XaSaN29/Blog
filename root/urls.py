@@ -20,17 +20,20 @@ from root import settings
 from django.conf.urls.static import static
 
 from apps.views import(
-    IndexView, AboutView, UserLoginView,
-    ProfilView, ProfilSettingsView,
-    SearchView, RegisterView
+    IndexView, AboutView,
+    BlogView, ContactView,
+    SingleView, PostView
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name="index"),
     path('about/', AboutView.as_view(), name="about"),
-    path('login/', UserLoginView.as_view(), name="login"),
-    path('register/', RegisterView.as_view(), name="register")
+    path('blog/', BlogView.as_view(), name="blog"),
+    path('contact/', ContactView.as_view(), name="contact"),
+    path('single/', SingleView.as_view(), name="single"),
+    path('post/', PostView.as_view(), name="post"),
+
 ]
 
 if settings.DEBUG:

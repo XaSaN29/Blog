@@ -1,7 +1,5 @@
+{% load static%}
 <!DOCTYPE html>
-{% load static %}
-{% extends 'base.html' %}
-{% block main %}
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -20,7 +18,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css'%}" rel="stylesheet">
     </head>
 
 <body>
@@ -46,7 +44,29 @@
         </div>
         <div class="content">
             <!-- Navbar Start -->
-
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+                    <a href="" class="navbar-brand d-block d-lg-none">Navigation</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="{% url 'index'%}" class="nav-item nav-link">Home</a>
+                            <a href="{% url 'about'%}" class="nav-item nav-link active">About</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="{% url 'blog'%}" class="dropdown-item">Blog Grid</a>
+                                    <a href="{% url 'single'%}" class="dropdown-item">Blog Detail</a>
+                                </div>
+                            </div>
+                            <a href="{% url 'contact'%}" class="nav-item nav-link">Contact</a>
+                            <a href="{% url 'post'%}" class="nav-item nav-link ">Post</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
             <!-- Navbar End -->
 
             <!-- Page Header Start -->
@@ -123,4 +143,3 @@
 </body>
 
 </html>
-{% endblock main %}
