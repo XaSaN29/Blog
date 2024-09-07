@@ -1,5 +1,5 @@
-{% load static%}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -44,29 +44,7 @@
             </div>
             <div class="content">
                 <!-- Navbar Start -->
-                <div class="container p-0">
-                    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-                        <a href="" class="navbar-brand d-block d-lg-none">Navigation</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav m-auto">
-                                <a href="{% url 'index'%}" class="nav-item nav-link active">Home</a>
-                                <a href="{% url 'about'%}" class="nav-item nav-link">About</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="{% url 'blog'%}" class="dropdown-item">Blog Grid</a>
-                                        <a href="{% url 'single'%}" class="dropdown-item">Blog Detail</a>
-                                    </div>
-                                </div>
-                                <a href="{% url 'contact'%}" class="nav-item nav-link">Contact</a>
-                                <a href="{% url 'post'%}" class="nav-item nav-link ">Post</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
+
                 <!-- Navbar End -->
 
                 
@@ -268,12 +246,12 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static  'lib/easing/easing.min.js' %}"></script>
-        <script src="{% static  'lib/waypoints/waypoints.min.js' %}"></script>
-
-        <!-- Contact Javascript File -->
         <script src="{% static 'lib/easing/easing.min.js' %}"></script>
         <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'mail/contact.js' %}"></script>
 
         <!-- Template Javascript -->
         <script src="{% static 'js/main.js' %}"></script>

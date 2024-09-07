@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.views.generic import (
-    TemplateView, FormView, CreateView
+    TemplateView, FormView, CreateView, UpdateView, DeleteView, DetailView, ListView
 )
 
 from .form import UserLoginForm, UserRegisterForm
-from .models import User
+from .models import User, Post
 
 
 # Create your views here.
@@ -16,6 +16,12 @@ class IndexView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = "about.html"
+
+
+class PostView(ListView):
+    template_name = "post.html"
+    model = Post
+    context_object_name = "posts"
 
 
 class BlogView(TemplateView):
