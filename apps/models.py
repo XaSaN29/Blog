@@ -10,6 +10,7 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
+
 class User(AbstractUser):
     image = models.ImageField(upload_to='user/', blank=True, null=True)
     about_me = models.TextField(blank=True, null=True)
@@ -19,6 +20,9 @@ class Post(BaseModel):
     image = models.ImageField(upload_to='post/', blank=True, null=True)
     title = models.CharField(max_length=100, blank=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.title
 
 
 

@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from apps.views import(
     IndexView, AboutView,
     BlogView, ContactView,
-    SingleView, PostView
+    BlogDetailView,
 )
 
 urlpatterns = [
@@ -31,9 +31,7 @@ urlpatterns = [
     path('about/', AboutView.as_view(), name="about"),
     path('blog/', BlogView.as_view(), name="blog"),
     path('contact/', ContactView.as_view(), name="contact"),
-    path('single/', SingleView.as_view(), name="single"),
-    path('post/', PostView.as_view(), name="post"),
-
+    path('blog_detail/', BlogDetailView.as_view(), name="blog_detail"),
 ]
 
 if settings.DEBUG:

@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.views.generic import (
-    TemplateView, FormView, CreateView, UpdateView, DeleteView, DetailView, ListView
+    TemplateView, FormView,
+    CreateView, UpdateView,
+    DeleteView, DetailView,
+    ListView
 )
 
 from .form import UserLoginForm, UserRegisterForm
@@ -18,24 +21,15 @@ class AboutView(TemplateView):
     template_name = "about.html"
 
 
-class PostView(ListView):
-    template_name = "post.html"
-    model = Post
-    context_object_name = "posts"
-
-
-class BlogView(TemplateView):
+class BlogView(ListView):
     template_name = "blog.html"
+    model = Post
+    context_object_name = "blogs"
 
 
 class ContactView(TemplateView):
     template_name = "contact.html"
 
 
-class SingleView(TemplateView):
-    template_name = "single.html"
-
-
-class PostView(TemplateView):
-    template_name = "post.html"
-
+class BlogDetailView(TemplateView):
+    template_name = "blog_detail.html"
